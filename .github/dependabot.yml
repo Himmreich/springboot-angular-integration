@@ -1,14 +1,25 @@
+# Dependabot
+
 version: 2
+
 updates:
-  - package-ecosystem: "maven" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "maven"
+    directory: "/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "🪶"
+
   - package-ecosystem: "github-actions"
     directory: "/"
-    schedule: 
-      interval: "daily"
-  - package-ecosystem: "npm"
-    directory: "/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "🤖"
+
+  - package-ecosystem: "npm"
+    directory: "/frontend"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "🔧"
