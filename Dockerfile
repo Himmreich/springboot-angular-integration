@@ -1,4 +1,4 @@
-FROM maven:3.9.9-eclipse-temurin-23 AS build
+FROM maven:3-eclipse-temurin-24 AS build
 
 ADD . /home/project
 RUN mvn -f /home/project/pom.xml clean package -DskipTests
