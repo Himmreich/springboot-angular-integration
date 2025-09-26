@@ -3,7 +3,7 @@ FROM maven:3-eclipse-temurin-24 AS build
 ADD . /home/project
 RUN mvn -f /home/project/pom.xml clean package -DskipTests
 
-FROM eclipse-temurin:24-jre
+FROM eclipse-temurin:25-jre
 
 EXPOSE 8080/tcp
 
